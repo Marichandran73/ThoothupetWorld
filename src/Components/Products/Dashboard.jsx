@@ -3,7 +3,9 @@ import Navbar from "../Pages/Mynav";
 import Footer from "../Pages/Footer";
 import './Dashboard.css';
 
-import CustomerCart from './Cart'
+import Cart from './Cart'
+
+import { v4 as uuidv4 } from 'uuid';
 
 import { addCustomer as addcustomerAction } from '../Slices/CustomerSlice';
 import { RemoveItem } from '../Slices/CustomerSlice';
@@ -19,6 +21,7 @@ const Dashboard = () => {
   const MainValue = StaticData;
 
   const [input ,setInput ]=useState({
+    id: uuidv4(),
     name:'',
     address:'',
     Contact:'',
@@ -32,6 +35,7 @@ const Dashboard = () => {
 const dispatch =useDispatch();
 
 function addCustomer(e) {
+  
   e.preventDefault();
   if (input.name && input.address && input.Contact) {
     dispatch(addcustomerAction({
@@ -40,6 +44,7 @@ function addCustomer(e) {
 
     ));
     setInput({
+      id: uuidv4(),
       name: '',
       address: '',
       Contact: '',
@@ -98,7 +103,9 @@ function addCustomer(e) {
           <label htmlFor="">Contact No:</label>
         </td>
         <td>
-          <input type="number" 
+          <input type="phone" 
+          patttern="[0-9]{10}"
+          required
           placeholder="leave your number here..."
           value={input.Contact}
           onChange={(e) => setInput({ ...input, Contact: e.target.value })} />
@@ -192,7 +199,7 @@ function addCustomer(e) {
         ))}
       </div>
 
-      <CustomerCart/>
+      <Cart/>
 
     </div>
       <Footer />

@@ -16,8 +16,8 @@ const Cart = () => {
     <div className="main-card">
       <h1>Currently Available Things</h1>
       {customers && customers.length > 0 ? (
-        customers.map((customer, index) => (
-          <div key={index} className="customer-card">
+        customers.map((customer) => (
+          <div key={customer.id} className="customer-card">
             <img src={customer.imagePreview || customer.image} alt={customer.name} />
             <h2>{customer.name}</h2>
             <p>Address: {customer.address}</p>

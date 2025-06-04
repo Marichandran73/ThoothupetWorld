@@ -15,11 +15,11 @@ body {
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 70px;
+  height: 75px;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  z-index: 800;
+  z-index:999;
 }
 
 .navbar-left,
@@ -45,6 +45,7 @@ body {
  border-bottom-left-radius: 20px;
  border-top-left-radius: 20px;
  border: none;
+ min-width: none;
 }
 .nav-right-input button{
   height: 41px;
@@ -133,4 +134,65 @@ body.dark .login {
 
 body.dark .signup {
   background-color: #00bfff;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  
+  .navbar-left, .navbar-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-size: 28px;
+  }
+  .navbar-left a{
+    display: none;
+  }
+  .login,
+  .signup,
+  .lang-select,
+  .mode-toggle{
+    display: none;
+  }
+  .nav-right-input{
+    position:absolute;
+    left: 175px;
+    top: 30px;
+  }
+  
+  .navbar a {
+    font-size: 16px;
+  }
+  
+}
+@media (max-width: 480px) {
+  .navbar {
+    padding: 5px 10px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    color: blueviolet;
+  }
+  
+  
+  
+  .nav-right-input input {
+    position: relative;
+    left: 0;
+    top: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .nav-right-input button {
+    display: none;
+  }
+  
 }

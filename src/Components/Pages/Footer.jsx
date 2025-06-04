@@ -18,9 +18,9 @@ function Footer() {
       <div className="footer-section">
         <p>Follow Us</p>
         <div className="social-icons">
-          <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/facebook-new.png" alt="Facebook" /></a>
-          <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/twitter.png" alt="Twitter" /></a>
-          <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram" /></a>
+          <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/facebook-new.png" alt="Facebook" /> MARI RE</a>
+          <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/twitter.png" alt="Twitter" />MARI</a>
+          <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram" />@Maari_killer2</a>
         </div>
       </div>
     </footer>
