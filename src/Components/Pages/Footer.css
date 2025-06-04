@@ -1,0 +1,57 @@
+/* src/components/Footer.css */
+
+.footer {
+  background-color: #eeddd9;
+  color: #333;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.footer-section a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+
+.footer-section a:hover {
+  color: #007bff;
+}
+
+.social-icons a {
+  margin-right: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Dark mode support */
+body.dark .footer {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+body.dark .footer-section a {
+  color: #ccc;
+}
+
+body.dark .footer-section a:hover {
+  color: #00bfff;
+}
